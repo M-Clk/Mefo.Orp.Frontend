@@ -1,11 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatListModule } from '@angular/material/list';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { MatButtonModule } from '@angular/material/button';
-import { MatDividerModule } from '@angular/material/divider';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -13,16 +8,13 @@ import { MatDividerModule } from '@angular/material/divider';
   imports: [
     RouterModule,
     RouterOutlet,
-    MatSidenavModule,
-    MatListModule,
-    MatToolbarModule,
-    MatSlideToggleModule,
-    MatDividerModule,
-    MatButtonModule,
+    CommonModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
+
 export class AppComponent {
+
   title = 'Mefo.Orp.Frontend';
 }

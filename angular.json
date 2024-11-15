@@ -5,11 +5,11 @@
   "projects": {
     "Mefo.Orp.Frontend": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
+      "schematics": { 
+        "@schematics/angular:guard": { 
+          "implements": ["CanActivate"] },
+          "style": "scss" 
+        },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
