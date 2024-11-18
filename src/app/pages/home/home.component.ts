@@ -4,14 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-home',
   standalone: true,
   imports: [],
-  template: `
-    <div>
-      <h3 style="text-align: center;">Home</h3>
-      <hr />
-      <h5>Angular 18 demos application.</h5>
-      <h5>Click on the links to view specific demo.</h5>
-    </div>
-  `,
-  styles: ``,
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.scss'
 })
 export class HomeComponent {}
