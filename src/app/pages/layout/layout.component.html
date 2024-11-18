@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <div class="col-2" style="float: left;" >
+        <h3>MEFO Otel Acente </h3>
+        <button class="menu" routerLink="/admin">Dashboard</button>
+        <button class="menu" routerLink="">Home</button>
+        <button class="menu" routerLink="/about">About</button>
+        <button class="menu" (click)="logout()">Logout</button>
+      </div>
+      <div class="col-10">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

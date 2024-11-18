@@ -1,0 +1,20 @@
+<div class="signup-card">
+    <div class="card-title">
+        <h1>Create Account</h1>
+    </div>
+    <form class="form-group" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <input type="text" name="Username" placeholder="User Name" formControlName="Username">
+        <input type="text" name="Name" placeholder="Name" formControlName="Name">
+        <input type="text" name="Surname" placeholder="Surname" formControlName="Surname">
+        <input type="text" name="PhoneNumber" placeholder="Phone Number" formControlName="PhoneNumber">
+        <input type="text" name="Address" placeholder="Address" formControlName="Address">
+        <input type="email" name="Email" placeholder="Email" formControlName="Email">
+        <input type="password" name="Password" placeholder="Password" formControlName="Password">
+        <input type="submit" value="Signup">
+    </form>
+    <div class="card-terms">
+        <input type="checkbox"> <span>I have read and agree to the <a href="">Terms of Service</a></span>
+    </div>
+    <hr>
+    <span style = "font-size: 12px;">Already have an account?  <a class="btn" routerLink="/login">Sign In</a></span>
+</div>
