@@ -1,23 +1,47 @@
-<div class="">
-    <header class="d-flex bg-dark flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-        <div class="col-md-3 mb-2 mb-md-0">
-          <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-            <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
-          </a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
         </div>
-  
-        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-          <li><a routerLink="/about" class="nav-link px-2 link-secondary">About</a></li>
-          <li><a routerLink="/employee" class="nav-link px-2">employee</a></li>
-          <li><a routerLink="/projects" class="nav-link px-2">projects</a></li>
-          <li><a routerLink="/project-employee" class="nav-link px-2">project-employee</a></li> 
-        </ul>
-  
-        <div class="col-md-3 text-end"> 
-          <button type="button" class="btn btn-primary" (click)="logout()">Logoff</button>
-        </div>
-      </header>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
   </div>
-  <div class="container">
+</nav>
+
+<div class="grid-container">
+  <div class="item2">
+    <h3>MEFO Otel Acente </h3>
+    <button color="primary" routerLink="">Home</button>
+    <button color="primary" routerLink="/about">About</button>
+    <button (click)="logout()">Logout</button>
+  </div>
+  <div class="item3">
     <router-outlet></router-outlet>
   </div>
+</div>
