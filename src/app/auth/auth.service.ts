@@ -21,17 +21,17 @@ export class AuthService {
   login(data: any) {
     return this.httpClient.post(`${this.baseUrl}/Login/login`, data)
       .pipe(tap((result) => {
-        localStorage.setItem('authUser', JSON.stringify(result));
+        localStorage.setItem('token', JSON.stringify(result));
       }));
   }
 
   logout() {
-      localStorage.removeItem('authUser');
+      localStorage.removeItem('token');
   }
 
   isLoggedIn() {
     if (typeof localStorage !== 'undefined') {
-      return localStorage.getItem('authUser') !== null;
+      return localStorage.getItem('token') !== null;
     }
     else{
       return false;
